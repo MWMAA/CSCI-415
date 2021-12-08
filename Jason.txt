@@ -1,0 +1,26 @@
+PROGRAm EvalFormula;
+{Calculates the resul of a basic formula
+illustrates the use of procedures in JASON}
+{The procedure which evaluates the formula repeatedly}
+PROCEDURE FindFormula;
+PARAMETERS
+INTEGER x;
+REAL y;
+BEGIN
+WHIlE x ! 0 DO
+If x < 0 THEN SET y = 10-4.5*x
+ElSE SET y = 4.5 * x + 10
+ENDIF;
+EnDWHILE
+WRITE y;
+ReAD x;
+END;
+DECLARE
+INTEGER a;
+REAL b;
+{ Main program }
+BEGIN
+READ a;
+CALL FindFormula(a,b);
+WRITE b;
+END
